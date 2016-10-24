@@ -117,6 +117,7 @@
 |Default Join is 'equi'|Default Join is 'inner'|
 |Left Outer Join|Left Join|
 
+
 ## Summary
 
 * HDFS and YARN - file system and resource scheduler
@@ -126,6 +127,10 @@
 * Hive - data warehousing
 
 
+
+# Learning HBase
+
+## Understanding the HBase Ecosystem
 
 
 
