@@ -1,9 +1,13 @@
-# Learning Hadoop 2 Note
+# Learning Note on Hadoop 2 
 
+A combined note from on-line courses:
+
+* **Big Data - Unlock Value in Massive Datasets** from University of California, San Diego [Coursera Specification](https://www.coursera.org/specializations/big-data)
+* **Learning Hadoop 2** by Randal Scott King [Video Class from Packtpub](https://www.packtpub.com/mapt/video/big_data_and_business_intelligence/9781785888113)
 
 ## Section 1 Overview of Haddop Ecosystem
 
-![Hadoop Ecosystem](./hadoopecosystem.png  "Hadoop Ecosystem")
+![Hadoop Ecosystem](./image/hadoopecosystem.png  "Hadoop Ecosystem")
 
 ## Section 1.1 Overview of HDFS and YARN
 
@@ -19,7 +23,7 @@
 * File system for Hadoop
 * Spans all nodes in a cluster
 * Stores data in 64M chuncks on multiple servers
-![](./HDFS.png)
+![](./image/HDFS.png)
 
 
 **Yet Another Resouce Negotiator(YARN)**
@@ -27,7 +31,7 @@
 * Control access to cluster resources
 * New in Hadoop 2
 * Allows multiple compute engines to run (MapReduce, Spark, Tez, and so on)
-![](./YARN.png)
+![](./image/YARN.png)
 
 
 ## Section 1.2 Overview of Sqoop and Flume
@@ -39,7 +43,7 @@
 * Pulls data from relational databases (Oracle, PostgreSQL, and so on)
 * Stores on HDFS or import directly to Hive
 * Uses drivers that are not included
-![](./Sqoop.png)
+![](./image/Sqoop.png)
 
 **Flume**
 
@@ -47,7 +51,7 @@
 * Only a transport agent
 * Buffered
 * Three parts: Source, Channel, and Sink
-![](./Flume.png)
+![](./image/Flume.png)
 
 
 ##Section 1.3 Overview of MapReduce
@@ -58,7 +62,7 @@
 * Two important functions: Map and Reduce
 
 **How it works:**
-![](./MapReduce.png)
+![](./image/MapReduce.png)
 
 **How create a MapReduce Program:**
 
@@ -76,7 +80,7 @@
 * Dataflow scripting language
 * Builds MapReduce programs from scripts and translate into Java
 * User Definable Functions(UDFs)
-![](./Pig.png)
+![](./image/Pig.png)
 
 
 ##Section 1.5 Overview of Hive
