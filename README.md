@@ -5,10 +5,11 @@ A combined note from on-line courses:
 * **Big Data - Unlock Value in Massive Datasets** from University of California, San Diego [Coursera Specification](https://www.coursera.org/specializations/big-data)
 * **Learning Hadoop 2** by Randal Scott King [Video Class from Packtpub](https://www.packtpub.com/mapt/video/big_data_and_business_intelligence/9781785888113)
 
-# Table of Content
-1. [Overview of Hadoop Ecosystem](#Section_1_Overview_of_Hadoop_Ecosystem)
-2. [Installing and Hands-on Hadoop](#Section_2_Installing_and_Hands-on_Hadoop)
+## Table of Content
+{:.no_toc}
 
+* TOC
+{:toc}
 ## Section 1 Overview of Hadoop Ecosystem
 
 ![Hadoop Ecosystem](./image/hadoopecosystem.png  "Hadoop Ecosystem")
