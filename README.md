@@ -13,18 +13,18 @@ A combined note from on-line courses:
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
 
-  - [Section 1 Overview of Hadoop Ecosystem](#section-1-overview-of-hadoop-ecosystem)
-    - [Section 1.1 Overview of HDFS and YARN](#section-11-overview-of-hdfs-and-yarn)
-    - [Section 1.2 Overview of Sqoop and Flume](#section-12-overview-of-sqoop-and-flume)
-    - [Section 1.3 Overview of MapReduce](#section-13-overview-of-mapreduce)
-    - [Section 1.4 Overview of Pig](#section-14-overview-of-pig)
-    - [Section 1.5 Overview of Hive](#section-15-overview-of-hive)
-    - [Summary](#summary)
-  - [Section 2 Installing and Hands-on Hadoop](#section-2-installing-and-hands-on-hadoop)
-    - [Downloading and Installing Cloudera Quickstart VM](#downloading-and-installing-cloudera-quickstart-vm)
-    - [Overview of Hue GUI](#overview-of-hue-gui)
-    - [Import and Export Data Manually](#import-and-export-data-manually)
-    - [Run MapReduce Example - WordCount](#run-mapreduce-example---wordcount)
+- [Section 1 Overview of Hadoop Ecosystem](#section-1-overview-of-hadoop-ecosystem)
+  - [Section 1.1 Overview of HDFS and YARN](#section-11-overview-of-hdfs-and-yarn)
+  - [Section 1.2 Overview of Sqoop and Flume](#section-12-overview-of-sqoop-and-flume)
+  - [Section 1.3 Overview of MapReduce](#section-13-overview-of-mapreduce)
+  - [Section 1.4 Overview of Pig](#section-14-overview-of-pig)
+  - [Section 1.5 Overview of Hive](#section-15-overview-of-hive)
+  - [Summary](#summary)
+- [Section 2 Installing and Hands-on Hadoop](#section-2-installing-and-hands-on-hadoop)
+  - [Section 2.1 Downloading and Installing Cloudera Quickstart VM](#section-21-downloading-and-installing-cloudera-quickstart-vm)
+  - [Section 2.2 Overview of Hue GUI](#section-22-overview-of-hue-gui)
+  - [Section 2.3 Import and Export Data Manually](#section-23-import-and-export-data-manually)
+  - [Section 2.4 Run MapReduce Example - WordCount](#section-24-run-mapreduce-example---wordcount)
 - [Next Sessions](#next-sessions)
   - [Importing from Database Using Sqoop](#importing-from-database-using-sqoop)
   - [Using Flume to Import Streaming Data](#using-flume-to-import-streaming-data)
@@ -160,7 +160,7 @@ A combined note from on-line courses:
 
 ## Section 2 Installing and Hands-on Hadoop
 
-### Downloading and Installing Cloudera Quickstart VM
+### Section 2.1 Downloading and Installing Cloudera Quickstart VM
 
 Use following instructions to download and install the Clourdera Quickstart VM with VirtualBox. The screenshots are taken from Windows, but the instructions should be the same for Mac computer.
 
@@ -169,7 +169,7 @@ Use following instructions to download and install the Clourdera Quickstart VM w
 3. **Import Cloudera VM to VirtualBox**. Start VirtualBox, import VM by going to File --> Import Appliance, select the .ovf file from the folder where you unzipped the Cloudera VM and click Open. Follow the instructions prompted by the VirtualBox to finish importing process.
 5. **Configure and Launch Cloudera VM**. When the importing is finished, the Cloudera Quickstart VM will appear on the left in the VirtualBox window. Select it and go to settings and pick General, make sure the OS type is Linux in the Basic tab and both Shared Clipboard and Drag and Drop are Bidirectional. Set enough memory in the System list. After all settings, click the Start button to launch the VM.
 
-### Overview of Hue GUI
+### Section 2.2 Overview of Hue GUI
 
 Exploring the Hue, a graphical user interface for Hadoop, to get familiar with the interface.
 
@@ -185,7 +185,7 @@ Exploring the Hue, a graphical user interface for Hadoop, to get familiar with t
 
 * Move to the file browser. It will show the file folder for the user we logged in with. To load some file, click the Upload option. There are Files and Zipped file options. Hadoop does not care much the types of file to upload, until it is not zipped.
 
-### Import and Export Data Manually 
+### Section 2.3 Import and Export Data Manually 
 
 * Importing data using Hue
 
@@ -213,7 +213,7 @@ Exploring the Hue, a graphical user interface for Hadoop, to get familiar with t
 
 	**hdfs dfs `<args`>**: same as 2nd i.e would work for all the operations related to HDFS and is the recommended command instead of `hadoop dfs`
 
-### Run MapReduce Example - WordCount
+### Section 2.4 Run MapReduce Example - WordCount
 
 * Use Hadoop Provided Example Jar
 	1. Verify input file exists in HDFS `hdfs dfs -ls`
@@ -245,17 +245,17 @@ Exploring the Hue, a graphical user interface for Hadoop, to get familiar with t
 
 
 
-# Next Sessions
+## Next Sessions
 
-## Importing from Database Using Sqoop
+### Importing from Database Using Sqoop
 * Create a database in MySQL and load data to the database
 * Using Sqoop command line to import data from the MySQL database to HDFS
 
-## Using Flume to Import Streaming Data
+### Using Flume to Import Streaming Data
 * Modify the Flume Agent configuration file
 * Create a text file in the local spooling directory and use Flume to import it to HDFS 
 
-## Demonstrate Pig scripting
+### Demonstrate Pig scripting
 
 * Coding the same word counting program, but this time in Pig.
 	* Open the Pig Script Editor in Hue and build our script
@@ -272,7 +272,7 @@ Exploring the Hue, a graphical user interface for Hadoop, to get familiar with t
 	* Register the Stats UDF and define a Quartile function to use it
 	* Write the script and run the code, resulting in a document that shows the minimum, median, and max values for Quantity in our data 
 
-## Using Hive
+### Using Hive
 
 
 
