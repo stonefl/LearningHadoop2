@@ -130,7 +130,7 @@ A combined note from on-line courses:
 * Pig- scripting language
 * Hive - data warehousing
 
-## Section 2 Installing and Configuring Hadoop
+## Section 2 Installing and Hands-on Hadoop
 
 ### Downloading and Installing Cloudera Quickstart VM
 
@@ -143,18 +143,108 @@ Use following instructions to download and install the Clourdera Quickstart VM w
 
 ### Overview of Hue GUI
 
+Exploring the Hue, a graphical user interface for Hadoop, to get familiar with the interface.
+
+* Navigate to the Hue page on top the page, which takes to the home page for Hue.
+
+* If you are first time to Hue, it will let you sign in to continue. Use default `cloudera` for both Username and Password.
+
+* If you want to access to Hue remotely in a cluster, the port number is 8888 as shown in the address bar.
+
+* Move to Step 4 GO and click on Hue Home link. It is the home page for Hue. On top there are various functions/commands. For example, there is a Query Editors to create queries for Hive, Pig, etc. Click the Hive to demo the query interface.
+
+* Move to the cloudera command, where you can edit and manage use profiles. Click manage users to the uses interface. Hadoop allows to link to LDAP server, which means you don't need to create user account for everyone. 
+
+* Move to the file browser. It will show the file folder for the user we logged in with. To load some file, click the Upload option. There are Files and Zipped file options. Hadoop does not care much the types of file to upload, until it is not zipped.
+
+### Import and Export Data Manually 
+
+* Importing data using Hue
+
+	1. Open a browser and enter following link in it:[Enter the following link in the browser: http://ocw.mit.edu/ans7870/6/6.006/s08/lecturenotes/files/t8.shakespeare.txt](Enter the following link in the browser: http://ocw.mit.edu/ans7870/6/6.006/s08/lecturenotes/files/t8.shakespeare.txt)
+	2. Once the page is loaded, click on the Save Page from the Open menu button.
+	3. Save the file with name `words.txt`. The file will be saved to /home/cloudera/Downloads
+	4. Go the Hue --> File Browser --> Upload
+
+* Importing data using CLI
+	1. Open the command line. Make sure Downloads is the current directory, and type `wget https://raw.githubusercontent.com/stonefl/LearningHadoop2/master/Names.txt` to download another file.
+	2. Run command `hdfs dfs -ls` or `hadoop fs -ls` to check if there is any files.
+	3. Import a file to HDFS `hdfs dfs -copyFromLocal words.txt`
+	4. Make a copy of file with HDFS `hdfs dfs -cp words.txt words2.txt`
+	5. Export a file from HDFS `hdfs dfs -copyToLocal words2.txt`
+	5. Delete a file in HDFS `hadoop fs -rm words2.txt`
+
+* Differences of three commands
+	* **hadoop fs {args}**
+	* **hadoop dfs {args}** (deprecated)
+	* **hdfs dfs {args}**
+	
+	**hadoop fs `<args`>**: `fs` relates to a generic file system which can point to any file systems like local, HDFS etc. So this can be used when you are dealing with different file systems such as Local FS, HFTP FS, S3 FS, and others
+
+	**hadoop dfs `<args`>**:`dfs` is very specific to HDFS. would work for operation relates to HDFS. This has been deprecated and we should use `hdfs dfs` instead.
+
+	**hdfs dfs `<args`>**: same as 2nd i.e would work for all the operations related to HDFS and is the recommended command instead of `hadoop dfs`
+
+### Run MapReduce Example - WordCount
+
+* Use Hadoop Provided Example Jar
+	1. Verify input file exists in HDFS `hdfs dfs -ls`
+	2. Run MapReduce example Jar. If you are using cloudera-quickstart-vm-5.4: 
+	
+	  `hadoop jar /usr/jars/haoop-examples.jar`
+
+	  `hadoop jar /usr/jars/haoop-examples.jar wordcount`
+
+	  `hadoop jar /usr/jars/haoop-examples.jar wordcount words.txt output1`
+      
+	   if you are using newer version, such cloudera-quickstart-vm-5.8:
+
+       `hadoop jar /usr/lib/hadoop-mapreduce/hadoop-mapreduce-examples.jar wordcount words.txt output`
+    3. Check the output folder `hadoop fs -ls output1`
+    4. Copy result to local file system `haddop fs -copyToLocal output1/part-r-00000 result1.txt`
+    5. View local result `more result1.txt`
+
+* Use Own-built Jar 
+	1. Open Eclipse and build a new Java project with the name `WordCountDemo`
+	2. Add external jars from both `/usr/lib/hadoop` and `/usr/lib/hadoop/client` to the java build path  
+	3. Add a new class named `WordCount` and copy the source code from GitHub to it
+	4. Export the project to a .jar file and save it to `home/cloudera`
+	5. Add the input file to the HDFS
+	6. Run `hadoop jar /home/cloudera/WordCount.jar WordCount Names.txt output2`
+	7. Check the output folder `hadoop fs -ls output2`
+    4. Copy result to local file system `haddop fs -copyToLocal output2/part-r-00000 result2.txt`
+    5. View local result `more result2.txt`
 
 
 
-# Learning HBase
+# Next Sessions
 
-## Understanding the HBase Ecosystem
+## Importing from Database Using Sqoop
+* Create a database in MySQL and load data to the database
+* Using Sqoop command line to import data from the MySQL database to HDFS
 
+## Using Flume to Import Streaming Data
+* Modify the Flume Agent configuration file
+* Create a text file in the local spooling directory and use Flume to import it to HDFS 
 
+## Demonstrate Pig scripting
 
+* Coding the same word counting program, but this time in Pig.
+	* Open the Pig Script Editor in Hue and build our script
+	* Save the script for future use and run it
+	* Check the progress of the job in Hue and view the result 
+	
+* Use Pig to perform common Extract, Transform, and Load functions on data.
+	* Filter out certain data from a dataset and save the result
+	* Append one dataset to another in an identical format using Union
+	* Join one dataset to another using a common column in each 
 
+* Use predefined code called User Defined Functions (UDFs) in Pig scripts.
+	* Identify whether two UDF repositories (Piggybank and DataFu) are installed
+	* Register the Stats UDF and define a Quartile function to use it
+	* Write the script and run the code, resulting in a document that shows the minimum, median, and max values for Quantity in our data 
 
-
+## Using Hive
 
 
 
