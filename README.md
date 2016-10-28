@@ -1,3 +1,5 @@
+
+
 # Learning Note on Hadoop 2 
 
 A combined note from on-line courses:
@@ -5,11 +7,32 @@ A combined note from on-line courses:
 * **Big Data - Unlock Value in Massive Datasets** from University of California, San Diego [Coursera Specification](https://www.coursera.org/specializations/big-data)
 * **Learning Hadoop 2** by Randal Scott King [Video Class from Packtpub](https://www.packtpub.com/mapt/video/big_data_and_business_intelligence/9781785888113)
 
-## Table of Content
-{:.no_toc}
+## Table of Contents
 
-* TOC
-{:toc}
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
+
+  - [Section 1 Overview of Hadoop Ecosystem](#section-1-overview-of-hadoop-ecosystem)
+    - [Section 1.1 Overview of HDFS and YARN](#section-11-overview-of-hdfs-and-yarn)
+    - [Section 1.2 Overview of Sqoop and Flume](#section-12-overview-of-sqoop-and-flume)
+    - [Section 1.3 Overview of MapReduce](#section-13-overview-of-mapreduce)
+    - [Section 1.4 Overview of Pig](#section-14-overview-of-pig)
+    - [Section 1.5 Overview of Hive](#section-15-overview-of-hive)
+    - [Summary](#summary)
+  - [Section 2 Installing and Hands-on Hadoop](#section-2-installing-and-hands-on-hadoop)
+    - [Downloading and Installing Cloudera Quickstart VM](#downloading-and-installing-cloudera-quickstart-vm)
+    - [Overview of Hue GUI](#overview-of-hue-gui)
+    - [Import and Export Data Manually](#import-and-export-data-manually)
+    - [Run MapReduce Example - WordCount](#run-mapreduce-example---wordcount)
+- [Next Sessions](#next-sessions)
+  - [Importing from Database Using Sqoop](#importing-from-database-using-sqoop)
+  - [Using Flume to Import Streaming Data](#using-flume-to-import-streaming-data)
+  - [Demonstrate Pig scripting](#demonstrate-pig-scripting)
+  - [Using Hive](#using-hive)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 ## Section 1 Overview of Hadoop Ecosystem
 
 ![Hadoop Ecosystem](./image/hadoopecosystem.png  "Hadoop Ecosystem")
