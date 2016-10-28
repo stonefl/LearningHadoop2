@@ -173,15 +173,15 @@ Use following instructions to download and install the Clourdera Quickstart VM w
 
 Exploring the Hue, a graphical user interface for Hadoop, to get familiar with the interface.
 
-* Navigate to the Hue page on top the page, which takes to the home page for Hue.
+* Navigate to the Hue page on top of the page, which takes to the home page for Hue.
 
 * If you are first time to Hue, it will let you sign in to continue. Use default `cloudera` for both Username and Password.
 
 * If you want to access to Hue remotely in a cluster, the port number is 8888 as shown in the address bar.
 
-* Move to Step 4 GO and click on Hue Home link. It is the home page for Hue. On top there are various functions/commands. For example, there is a Query Editors to create queries for Hive, Pig, etc. Click the Hive to demo the query interface.
+* Move to Step 4 GO and click on Hue Home link. It is the home page for Hue. On top there are various functional menus. For example, there is a Query Editors to create queries for Hive, Pig, etc. Click the Hive to demo the query interface.
 
-* Move to the cloudera command, where you can edit and manage use profiles. Click manage users to the uses interface. Hadoop allows to link to LDAP server, which means you don't need to create user account for everyone. 
+* Move to the cloudera command, where you can edit and manage user profiles. Click manage users to the user interface. Hadoop allows to link to LDAP server, which means you don't need to create user account for everyone. 
 
 * Move to the file browser. It will show the file folder for the user we logged in with. To load some file, click the Upload option. There are Files and Zipped file options. Hadoop does not care much the types of file to upload, until it is not zipped.
 
