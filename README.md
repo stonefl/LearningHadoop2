@@ -51,14 +51,35 @@ A combined note from on-line courses:
 * File system for Hadoop
 * Spans all nodes in a cluster
 * Stores data in 64M chunks on multiple servers
+
+It is a foundation for Hadoop and provides scalable and reliable stroage and fault tolerance. 
+
+Data partitioning --> Scalability
+Data replication --> Fault tolerance and Data locality
+
+Two key components of HDFS:
+1. NameNode for metadata, usualy one per cluster. The NameNode
+         * coordinates operations, 
+         * Keeps track of file name, location in directory, etc. 
+         * Mapping of contents on DataNode
+2. DataNodes for block storage, usually one per machine. Listens to NameNode for:
+        * block creation
+        * deletion
+        * replication - data locality and fault tolerance
+
 ![](./image/HDFS.png)
 
 
 **Yet Another Resource Negotiator(YARN)**
 
+Flexible scheduling and resource management.
+
 * Control access to cluster resources
 * New in Hadoop 2
 * Allows multiple compute engines to run (MapReduce, Spark, Tez, and so on)
+
+
+
 ![](./image/YARN.png)
 
 
@@ -84,6 +105,12 @@ A combined note from on-line courses:
 
 ### Section 1.3 Overview of MapReduce
 
+MapReduce is a programming model that simplifies parallel computing.
+
+Map --> Appply operations to all elements
+Shuffle and sort  --> 
+Reduce --> Sumamarize operation on elements
+
 * Created by Yahoo! from a paper by Google
 * Computation engine
 * Coded in Java
@@ -102,8 +129,16 @@ A combined note from on-line courses:
 * Compile and create a .jar from Java code
 * Add .jar to Hadoop repository to use
 
+MapReduce is bad for"
+
+* Frequently changing data
+* Dependent tasks
+* Interactive analysis
+
+
 
 ### Section 1.4 Overview of Pig
+
 * Developed by Yahoo! shortly after MapReduce
 * Dataflow scripting language
 * Builds MapReduce programs from scripts and translate into Java
@@ -112,6 +147,7 @@ A combined note from on-line courses:
 
 
 ### Section 1.5 Overview of Hive
+
 * Data warehousing solution for Hadoop
 * Uses tables, just like traditional databases
 * HiveQL - SQL-ish query language
@@ -150,6 +186,43 @@ A combined note from on-line courses:
 |Left Outer Join|Left Join|
 
 
+### Section 1.6 When to Reconsider Hadoop?
+
+When should use Hadoop?
+
+* Future anticipated data growth
+* Long term availability of data
+* Many platforms over single data store
+* High Volume
+* High Variety
+
+When should reconsider?
+
+* Small Datasets
+* Task level parallelism - Hadoop is good for data parallelism, which is the simultaneous execution of **the same function** on multiple nodes across the elements of a dataset. On the other hand, task parallelism is the simultaneous execution of **many different functions** on multiple nodes across the same or different data sets. 
+* Advanced algorithms
+* Replacement to your infrasturcture
+* Random data access
+
+### Cloud Computing - An Important BIg Data Enabler
+
+Benefits of cloud:
+* Pay as you go
+* Quick implemetation
+* Deploy closer to your client
+* Resource estimation solved
+* Work on your domain expertise
+* Instantly get different resources
+
+Cloud service models:
+
+* Infrastructure As a Service(IaaS) - Get the hardware only and you will install and maintain OS application software. For example, Amazon EC2
+* Platform AS a Service (PaaS) - Get the computing environment, you can run application software. For example, Google App engine, Microsoft Azure
+* Application AS a Service (SaaS) - Get full software on-demand, you can just focus on domain goals. For example, DropBox
+
+
+Major factors: skills, demand, capital, security
+
 ### Summary
 
 * HDFS and YARN - file system and resource scheduler
@@ -157,6 +230,10 @@ A combined note from on-line courses:
 * MapReduce - original computational engine of Hadoop
 * Pig- scripting language
 * Hive - data warehousing
+* Giraph - Specialized models for graph processing
+* Storm, Spark and Flink are built for real-time and in-memory processing.
+* HBase, Cassandra, and MongoDB are NoSQL for non-files, such as Key-values and sparse tables.
+* ZooKeeper - Synchronization, Configuration, and Hight-availability
 
 ## Section 2 Installing and Hands-on Hadoop
 
