@@ -39,6 +39,14 @@ A combined note from on-line courses:
 
 ![Hadoop Ecosystem](./image/hadoopecosystem.png  "Hadoop Ecosystem")
 
+Major goals of Hadoop:
+
+1. Enable Scalability
+2. Handle Fault Tolerance
+3. Optimized for a Variety Data Types
+4. Facilitate a Shared Environment
+5. Provide Value
+
 ### Section 1.1 Overview of HDFS and YARN
 
 **Distributed computing**
@@ -54,20 +62,22 @@ A combined note from on-line courses:
 * Spans all nodes in a cluster
 * Stores data in 64M chunks on multiple servers
 
-It is a foundation for Hadoop and provides scalable and reliable stroage and fault tolerance. 
+It is a foundation for Hadoop and provides scalable and reliable storage and fault tolerance. 
 
 Data partitioning --> Scalability
+
 Data replication --> Fault tolerance and Data locality
 
 Two key components of HDFS:
+
 1. NameNode for metadata, usualy one per cluster. The NameNode
-         * coordinates operations, 
-         * Keeps track of file name, location in directory, etc. 
-         * Mapping of contents on DataNode
+	1. Coordinates operations
+	2. Keeps track of file name, location in directory, etc. 
+	3. Mapping of contents on DataNode
 2. DataNodes for block storage, usually one per machine. Listens to NameNode for:
-        * block creation
-        * deletion
-        * replication - data locality and fault tolerance
+	1. block creation
+	2. deletion
+	3. replication - data locality and fault tolerance
 
 ![](./image/HDFS.png)
 
@@ -79,6 +89,13 @@ Flexible scheduling and resource management.
 * Control access to cluster resources
 * New in Hadoop 2
 * Allows multiple compute engines to run (MapReduce, Spark, Tez, and so on)
+
+Essential gears in YARN engine:
+
+* Resource Manager(RM): RM + NM = Data Computation Framework
+* Node Manager(NM): RM + NM = Data Computation Framework
+* Application Master = personal negotiator
+* Container = a machine
 
 
 
@@ -109,9 +126,9 @@ Flexible scheduling and resource management.
 
 MapReduce is a programming model that simplifies parallel computing.
 
-Map --> Appply operations to all elements
-Shuffle and sort  --> 
-Reduce --> Sumamarize operation on elements
+1. Map --> Appply operations to all elements
+2. Shuffle and sort
+3. Reduce --> Sumamarize operation on elements
 
 * Created by Yahoo! from a paper by Google
 * Computation engine
@@ -119,6 +136,7 @@ Reduce --> Sumamarize operation on elements
 * Two important functions: Map and Reduce
 
 **How it works:**
+
 ![](./image/MapReduce.png)
 
 **How create a MapReduce Program:**
@@ -210,7 +228,7 @@ When should reconsider?
 
 Benefits of cloud:
 * Pay as you go
-* Quick implemetation
+* Quick implementation
 * Deploy closer to your client
 * Resource estimation solved
 * Work on your domain expertise
