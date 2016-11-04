@@ -19,6 +19,8 @@ A combined note from on-line courses:
   - [Section 1.3 Overview of MapReduce](#section-13-overview-of-mapreduce)
   - [Section 1.4 Overview of Pig](#section-14-overview-of-pig)
   - [Section 1.5 Overview of Hive](#section-15-overview-of-hive)
+  - [Section 1.6 When to Reconsider Hadoop?](#section-16-when-to-reconsider-hadoop)
+  - [Section 1.7 Cloud Computing - An Important BIg Data Enabler](#section-17-cloud-computing---an-important-big-data-enabler)
   - [Summary](#summary)
 - [Section 2 Installing and Hands-on Hadoop](#section-2-installing-and-hands-on-hadoop)
   - [Section 2.1 Downloading and Installing Cloudera Quickstart VM](#section-21-downloading-and-installing-cloudera-quickstart-vm)
@@ -204,7 +206,7 @@ When should reconsider?
 * Replacement to your infrasturcture
 * Random data access
 
-### Cloud Computing - An Important BIg Data Enabler
+### Section 1.7 Cloud Computing - An Important BIg Data Enabler
 
 Benefits of cloud:
 * Pay as you go
