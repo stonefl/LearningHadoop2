@@ -260,7 +260,7 @@ Exploring the Hue, a graphical user interface for Hadoop, to get familiar with t
 
 * Move to Step 4 GO and click on Hue Home link. It is the home page for Hue. On top there are various functional menus. For example, there is a Query Editors to create queries for Hive, Pig, etc. Click the Hive to demo the query interface.
 
-* Move to the cloudera command, where you can edit and manage user profiles. Click manage users to the user interface. Hadoop allows to link to LDAP server, which means you don't need to create user account for everyone. 
+* Move to the cloudera menu, where you can edit and manage user profiles. Click manage users to the user interface. Hadoop allows to link to LDAP server, which means you don't need to create user account for everyone. 
 
 * Move to the file browser. It will show the file folder for the user we logged in with. To load some file, click the Upload option. There are Files and Zipped file options. Hadoop does not care much the types of file to upload, until it is not zipped.
 
@@ -268,7 +268,7 @@ Exploring the Hue, a graphical user interface for Hadoop, to get familiar with t
 
 * Importing data using Hue
 
-	1. Open a browser and enter following link in it:[Enter the following link in the browser: http://ocw.mit.edu/ans7870/6/6.006/s08/lecturenotes/files/t8.shakespeare.txt](Enter the following link in the browser: http://ocw.mit.edu/ans7870/6/6.006/s08/lecturenotes/files/t8.shakespeare.txt)
+	1. Open a browser and enter following link in address bar:[http://ocw.mit.edu/ans7870/6/6.006/s08/lecturenotes/files/t8.shakespeare.txt](Enter the following link in the browser: http://ocw.mit.edu/ans7870/6/6.006/s08/lecturenotes/files/t8.shakespeare.txt)
 	2. Once the page is loaded, click on the Save Page from the Open menu button.
 	3. Save the file with name `words.txt`. The file will be saved to /home/cloudera/Downloads
 	4. Go the Hue --> File Browser --> Upload
@@ -306,7 +306,7 @@ Exploring the Hue, a graphical user interface for Hadoop, to get familiar with t
       
 	   if you are using newer version, such cloudera-quickstart-vm-5.8:
 
-       `hadoop jar /usr/lib/hadoop-mapreduce/hadoop-mapreduce-examples.jar wordcount words.txt output`
+       `hadoop jar /usr/lib/hadoop-mapreduce/hadoop-mapreduce-examples.jar wordcount words.txt output1`
     3. Check the output folder `hadoop fs -ls output1`
     4. Copy result to local file system `haddop fs -copyToLocal output1/part-r-00000 result1.txt`
     5. View local result `more result1.txt`
