@@ -131,7 +131,7 @@ Reduce --> Sumamarize operation on elements
 * Compile and create a .jar from Java code
 * Add .jar to Hadoop repository to use
 
-MapReduce is bad for"
+MapReduce is bad for
 
 * Frequently changing data
 * Dependent tasks
@@ -241,10 +241,10 @@ Major factors: skills, demand, capital, security
 
 ### Section 2.1 Downloading and Installing Cloudera Quickstart VM
 
-Use following instructions to download and install the Clourdera Quickstart VM with VirtualBox. The screenshots are taken from Windows, but the instructions should be the same for Mac computer.
+Use following instructions to download and install the Clourdera Quickstart VM with VirtualBox:
 
 1. **Install VirtualBox.** If you don't have VirtualBox installed yet, you can go to [https://www.virtualbox.org/wiki/Downloads](https://www.virtualbox.org/wiki/Downloads) to download and install the latest version of VirtualBox for your computer.
-2. **Download Cloudera Quickstart VM.** Go to [http://www.cloudera.com/downloads/quickstart_vms/5-8.html](http://www.cloudera.com/downloads/quickstart_vms/5-8.html) and specify VirtualBox as platform to download the latest version of Cloudera Quickstart VM. It might take some time to download, since the VM is over 4GB. After download, unzip the VM.
+2. **Download Cloudera Quickstart VM.** Go to [https://downloads.cloudera.com/demo_vm/virtualbox/cloudera-quickstart-vm-5.4.2-0-virtualbox.zip](https://downloads.cloudera.com/demo_vm/virtualbox/cloudera-quickstart-vm-5.4.2-0-virtualbox.zip) and specify VirtualBox as platform to download the latest version of Cloudera Quickstart VM V5.4.2. It might take some time to download, since the VM is over 4GB. After download, unzip the VM.
 3. **Import Cloudera VM to VirtualBox**. Start VirtualBox, import VM by going to File --> Import Appliance, select the .ovf file from the folder where you unzipped the Cloudera VM and click Open. Follow the instructions prompted by the VirtualBox to finish importing process.
 5. **Configure and Launch Cloudera VM**. When the importing is finished, the Cloudera Quickstart VM will appear on the left in the VirtualBox window. Select it and go to settings and pick General, make sure the OS type is Linux in the Basic tab and both Shared Clipboard and Drag and Drop are Bidirectional. Set enough memory in the System list. After all settings, click the Start button to launch the VM.
 
