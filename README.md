@@ -130,6 +130,7 @@ MapReduce is a programming model that simplifies parallel computing.
 2. Shuffle and sort
 3. Reduce --> Sumamarize operation on elements
 
+
 * Created by Yahoo! from a paper by Google
 * Computation engine
 * Coded in Java
@@ -144,12 +145,12 @@ MapReduce is a programming model that simplifies parallel computing.
 * Create Java code
 	* Import packages
 	* Map: "Tokenize" words, create key/value pairs
-	* Reduce: Sum instances fo each word from all lines, create new key/value
+	* Reduce: Sum instances of each word from all lines, create new key/value
 	* Results in about 65 lines of code
 * Compile and create a .jar from Java code
 * Add .jar to Hadoop repository to use
 
-MapReduce is bad for
+**MapReduce is not good at:**
 
 * Frequently changing data
 * Dependent tasks
@@ -224,7 +225,7 @@ When should reconsider?
 * Replacement to your infrasturcture
 * Random data access
 
-### Section 1.7 Cloud Computing - An Important BIg Data Enabler
+### Section 1.7 Cloud Computing - An Important Big Data Enabler
 
 Benefits of cloud:
 * Pay as you go
@@ -268,7 +269,7 @@ Use following instructions to download and install the Clourdera Quickstart VM w
 
 ### Section 2.2 Overview of Hue GUI
 
-Exploring the Hue, a graphical user interface for Hadoop, to get familiar with the interface.
+Exploring the Hue, a graphic user interface for Hadoop, to get familiar with the interface.
 
 * Navigate to the Hue page on top of the page, which takes to the home page for Hue.
 
