@@ -342,12 +342,25 @@ Exploring the Hue, a graphic user interface for Hadoop, to get familiar with the
     5. View local result `more result2.txt`
 
 
+### Section 2.5 Importing data from Database Using Sqoop
+
+* Create a database in MySQL and load data to the database
+
+
+1. Download the _Customers.csv_ files from [Learning Hadoop 2 GitHub](https://github.com/stonefl/LearningHadoop2).
+2. From the terminal run `sudo service mysqld status` to check if MySQL server is running. There are two useful commands to start and stop MySQL server: `sudo service mysqld start` and `sudo service mysql stop`
+3. Use MySQL command line `mysql -u root -p`
+
+```
+sqoop import
+--conne
+
+```
+* Using Sqoop command line to import data from the MySQL database to HDFS
+
+
 
 ## Next Sessions
-
-### Importing from Database Using Sqoop
-* Create a database in MySQL and load data to the database
-* Using Sqoop command line to import data from the MySQL database to HDFS
 
 ### Using Flume to Import Streaming Data
 * Modify the Flume Agent configuration file
