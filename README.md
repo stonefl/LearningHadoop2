@@ -344,29 +344,55 @@ Exploring the Hue, a graphic user interface for Hadoop, to get familiar with the
 
 ### Section 2.5 Importing data from Database Using Sqoop
 
-* Create a database in MySQL and load data to the database
+* Create a database in MySQL database and load data to the database
 
-1. Download the _*SqoopExample.zip*_ file from [Learning Hadoop 2 on GitHub](https://github.com/stonefl/LearningHadoop2). 
-2. From the terminal run `sudo service mysqld status` to check if MySQL server is running. There are two useful commands to start and stop MySQL server: `sudo service mysqld start` and `sudo service mysql stop`
-3. Use command `mysql -u root -p` to login
-4. Use `SHOW DATABASES;` to check existing databases. You can see all databases set up with cloudera image. Note: don't forget the semi-colom at the end.
-5. Use `CREATE DATABASE fdxcorp;` to create a new database for us.
-6. Use `USE fdxcorp;` to pick the database just built.
-7. Use following query to build a table named 'Customers'
+	1. Download the _*SqoopExample.zip*_ file from [Learning Hadoop 2 on GitHub](https://github.com/stonefl/LearningHadoop2). 
+	
+	2. From the terminal run `sudo service mysqld status` to check if MySQL server is running. `sudo service mysqld start` and `sudo service mysql stop` are two useful commands to start and stop MySQL server, respectively. 
+	
+	3. Use command `mysql -u root -p` to login.
+	
+	4. Use `SHOW DATABASES;` to check existing databases. You can see all databases set up with cloudera image. Note: don't forget the semi-colom at the end.
+	
+	5. Use `CREATE DATABASE fdxcorp;` to create a new database for us.
+
+	6. Use `USE fdxcorp;` to pick the database just built.
+
+	7. Use following query to build a table named 'Customers':
 
 ```
 	CREATE TABLE Customers
 	(AccountNo TEXT, AccountName Text, Address TEXT, City TEXT, State TEXT, ZIP TEXT);
-
 ```
 
-8. Use `DESCRBE Customers;` to check the table just build.
-9. Use 
+	8. Use `DESCRBE Customers;` to check the table just build.
+
+	9. Use following query to load Customers.csv to Customers table:
+	
+```
+	LOAD DATA LOCAL INFILE
+	'/home/cloudera/Downloads/SqoopExample/Customers.csv'
+	INTO TABLE Customers
+	FIELDS TERMINATED BY ','
+	LINES TERMINATED BY '/r';
+```
+	10. Use `SELECT * FROM Customers` to make sure data is loaded correctly.
+
+	11. Type `exit` to exit MySQL.
 
 
-* Using Sqoop command line to import data from the MySQL database to HDFS
+* Using Sqoop command line to import data from the MySQL database to HDFS.
 
+Use the following Sqoop query to import table from MySQL to HDFS, or you can just run the `sqoopImport.sh` in the _SqoopExample_ directory.
 
+```
+sqoop import \
+--connect jdbc:mysql://127.0.0.1:3306/fdxcorp \
+--table Customers \
+--username root -P \
+--direct -m 1;
+
+```
 
 ## Next Sessions
 
