@@ -20,15 +20,15 @@ A combined note from on-line courses:
   - [Section 1.4 Overview of Pig](#section-14-overview-of-pig)
   - [Section 1.5 Overview of Hive](#section-15-overview-of-hive)
   - [Section 1.6 When to Reconsider Hadoop?](#section-16-when-to-reconsider-hadoop)
-  - [Section 1.7 Cloud Computing - An Important BIg Data Enabler](#section-17-cloud-computing---an-important-big-data-enabler)
+  - [Section 1.7 Cloud Computing - An Important Big Data Enabler](#section-17-cloud-computing---an-important-big-data-enabler)
   - [Summary](#summary)
 - [Section 2 Installing and Hands-on Hadoop](#section-2-installing-and-hands-on-hadoop)
   - [Section 2.1 Downloading and Installing Cloudera Quickstart VM](#section-21-downloading-and-installing-cloudera-quickstart-vm)
   - [Section 2.2 Overview of Hue GUI](#section-22-overview-of-hue-gui)
   - [Section 2.3 Import and Export Data Manually](#section-23-import-and-export-data-manually)
   - [Section 2.4 Run MapReduce Example - WordCount](#section-24-run-mapreduce-example---wordcount)
+  - [Section 2.5 Importing data from Database Using Sqoop](#section-25-importing-data-from-database-using-sqoop)
 - [Next Sessions](#next-sessions)
-  - [Importing from Database Using Sqoop](#importing-from-database-using-sqoop)
   - [Using Flume to Import Streaming Data](#using-flume-to-import-streaming-data)
   - [Demonstrate Pig scripting](#demonstrate-pig-scripting)
   - [Using Hive](#using-hive)
@@ -364,7 +364,6 @@ Exploring the Hue, a graphic user interface for Hadoop, to get familiar with the
 	CREATE TABLE Customers
 	(AccountNo TEXT, AccountName Text, Address TEXT, City TEXT, State TEXT, ZIP TEXT);
 ```
-
 	8. Use `DESCRBE Customers;` to check the table just build.
 
 	9. Use following query to load Customers.csv to Customers table:
