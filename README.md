@@ -346,6 +346,8 @@ Exploring the Hue, a graphic user interface for Hadoop, to get familiar with the
 
 * Create a database in MySQL database and load data to the database
 
+
+
 	1. Download the _*SqoopExample.zip*_ file from [Learning Hadoop 2 on GitHub](https://github.com/stonefl/LearningHadoop2). 
 	
 	2. From the terminal run `sudo service mysqld status` to check if MySQL server is running. `sudo service mysqld start` and `sudo service mysql stop` are two useful commands to start and stop MySQL server, respectively. 
@@ -360,21 +362,22 @@ Exploring the Hue, a graphic user interface for Hadoop, to get familiar with the
 
 	7. Use following query to build a table named 'Customers':
 
-```
-	CREATE TABLE Customers
-	(AccountNo TEXT, AccountName Text, Address TEXT, City TEXT, State TEXT, ZIP TEXT);
-```
+	```
+		CREATE TABLE Customers
+		(AccountNo TEXT, AccountName Text, Address TEXT, City TEXT, State TEXT, ZIP TEXT);
+	```
 	8. Use `DESCRBE Customers;` to check the table just build.
 
 	9. Use following query to load Customers.csv to Customers table:
-	
-```
-	LOAD DATA LOCAL INFILE
-	'/home/cloudera/Downloads/SqoopExample/Customers.csv'
-	INTO TABLE Customers
-	FIELDS TERMINATED BY ','
-	LINES TERMINATED BY '/r';
-```
+
+	```
+		LOAD DATA LOCAL INFILE
+		'/home/cloudera/Downloads/SqoopExample/Customers.csv'
+		INTO TABLE Customers
+		FIELDS TERMINATED BY ','
+		LINES TERMINATED BY '/r';
+	```
+
 	10. Use `SELECT * FROM Customers` to make sure data is loaded correctly.
 
 	11. Type `exit` to exit MySQL.
