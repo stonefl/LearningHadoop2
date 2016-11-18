@@ -375,7 +375,7 @@ Exploring the Hue, a graphic user interface for Hadoop, to get familiar with the
 		'/home/cloudera/Downloads/SqoopExample/Customers.csv'
 		INTO TABLE Customers
 		FIELDS TERMINATED BY ','
-		LINES TERMINATED BY '/r';
+		LINES TERMINATED BY '\n';
 	```
 
 	10. Use `SELECT * FROM Customers` to make sure data has been loaded correctly.
