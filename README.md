@@ -267,7 +267,9 @@ Use following instructions to download and install the Clourdera Quickstart VM w
 3. **Import Cloudera VM to VirtualBox**. Start VirtualBox, import VM by going to File --> Import Appliance, select the .ovf file from the folder where you unzipped the Cloudera VM and click Open. Follow the instructions prompted by the VirtualBox to finish importing process.
 5. **Configure and Launch Cloudera VM**. When the importing is finished, the Cloudera Quickstart VM will appear on the left in the VirtualBox window. Select it and go to settings and pick General, make sure the OS type is Linux in the Basic tab and both Shared Clipboard and Drag and Drop are Bidirectional. Set enough memory in the System list. After all settings, click the Start button to launch the VM.
 
-** How to set up share folder with virtual machine?**
+
+**How to set up share folder with virtual machine?**
+
 
 ### Section 2.2 Overview of Hue GUI
 
