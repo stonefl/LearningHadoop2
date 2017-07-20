@@ -2,10 +2,11 @@
 
 # Learning Note on Hadoop 2 
 
-A combined note from on-line courses:
+A combined note from online courses:
 
 * **Big Data - Unlock Value in Massive Datasets** from University of California, San Diego [Coursera Specification](https://www.coursera.org/specializations/big-data)
 * **Learning Hadoop 2** by Randal Scott King [Video Class from Packtpub](https://www.packtpub.com/mapt/video/big_data_and_business_intelligence/9781785888113)
+* **Hadoop Platform and Application Framework** from University of California, San Diego [Coursera Specification](https://www.coursera.org/learn/hadoop/home/welcome)
 
 ## Table of Contents
 
@@ -424,6 +425,18 @@ sqoop import \
 	* Write the script and run the code, resulting in a document that shows the minimum, median, and max values for Quantity in our data 
 
 ### Using Hive
+
+
+# Section 3 Hadoop Platform and Applicaiton Frameworks
+
+## Hadoop Stack Basics
+
+What is Hadoop?
+
+Apache Hadoop is an open source software framework for storage and large scale processing of data-sets on clusters of commodity hardware.
+
+The basic idea of Hadoop is to move computation to data.
+
 
 
 
